@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./prism.css">
+  <script src="./prism.js"></script>
+</head>
+<body>
+  <pre>
+    <code class="language-css">
+      .main{
+        width: 100px;
+        height: 100px;
+        background: red;
+      }
+    </code>
+  </pre>
+  <pre>
+    <code class="language-js">
+      // node.js, 用“类”的方式：
+      var MarkdownIt = require('markdown-it'),
+      md = new MarkdownIt();
+      var result = md.render('# markdown-it rulezz!');
+
+      // 还是 node.js, 但使用更爽的方式：
+      var md = require('markdown-it')();
+      var result = md.render('# markdown-it rulezz!');
+
+      // 没有 AMD 的浏览器环境，在 js 脚本加载时才添加到“window”
+      // 注意，“markdownit” 中没有破折号。
+      var md = window.markdownit();
+      var result = md.render('# markdown-it rulezz!');
+    </code>
+  </pre>
+
+</body>
+</html>
